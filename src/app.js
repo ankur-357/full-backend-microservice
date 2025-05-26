@@ -27,7 +27,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "https://workouts-microservice-run8-1-team1-gym-dev.development.krci-dev.cloudmentor.academy/api/v1",
+      url: "https://gym-backend-run8-1-team1-gym-dev.development.krci-dev.cloudmentor.academy/api/v1",
     },
   ],
   components: {
