@@ -50,7 +50,13 @@ const swaggerOptions = {
   apis: ["**/routes/*.js"], // Assumes your routes are documented in route files
 };
 
-const swaggerSpec = swaggerJSDoc(swaggerOptions);
+let swaggerSpec;
+try {
+  swaggerSpec = swaggerJSDoc(swaggerOptions);
+} catch (err) {
+  console.error("Swagger setup failed:", err);
+  process.exit(1);
+}
 
 // Middleware
 app.use(cors());
@@ -63,7 +69,7 @@ app.use(cookieParser());
 mongoose
   .connect(
     process.env.MONGODB_URI ||
-      "mongodb+srv://atharva:atharva123@cluster0.lhzs4pw.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://atharva:atharva123@cluster0.lhzs4pw.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     console.log("MongoDB Connected");

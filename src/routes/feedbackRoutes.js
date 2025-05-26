@@ -36,7 +36,7 @@ const auth = require("../middleware/auth");
  *           maximum: 5
  *           description: Rating from 1 to 5
  *           example: 4.5
- *     SuccessResponse:
+ *     SuccessFResponse:
  *       type: object
  *       properties:
  *         message:
@@ -113,7 +113,7 @@ const auth = require("../middleware/auth");
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/SuccessResponse'
+ *               $ref: '#/components/schemas/SuccessFResponse'
  *       400:
  *         description: Validation error or duplicate feedback
  *         content:
