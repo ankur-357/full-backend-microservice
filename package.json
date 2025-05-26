@@ -6,7 +6,7 @@
     "start": "node dist/app.js",
     "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/app.js --bundle --platform=node --outfile=dist/app.js --external:aws-sdk --external:mongoose"
+    "build": "npx esbuild src/app.js --bundle --platform=node --outfile=dist/app.js --external:aws-sdk --external:mongoose"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +26,6 @@
     "multer": "^1.4.5-lts.2",
     "node-cron": "^3.0.3",
     "nodemon": "^3.1.9",
-    "path": "^0.12.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "uuid": "^11.1.0"

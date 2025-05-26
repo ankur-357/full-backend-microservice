@@ -63188,7 +63188,13 @@ var swaggerOptions = {
   apis: ["**/routes/*.js"]
   // Assumes your routes are documented in route files
 };
-var swaggerSpec = swaggerJSDoc(swaggerOptions);
+var swaggerSpec;
+try {
+  swaggerSpec = swaggerJSDoc(swaggerOptions);
+} catch (err) {
+  console.error("Swagger setup failed:", err);
+  process.exit(1);
+}
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
