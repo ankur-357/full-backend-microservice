@@ -68,8 +68,7 @@ app.use(cookieParser());
 // Connect to MongoDB
 mongoose
   .connect(
-    process.env.MONGODB_URI ||
-    "mongodb+srv://atharva:atharva123@cluster0.lhzs4pw.mongodb.net/usersDB?retryWrites=true&w=majority&appName=Cluster0"
+    process.env.MONGODB_URI 
   )
   .then(() => {
     console.log("MongoDB Connected");
