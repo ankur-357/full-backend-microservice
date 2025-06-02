@@ -144,8 +144,8 @@ AWS_SECRET_ACCESS_KEY=your_aws_secret_key
 ```
 
 ## 👤 Author
-Created by: Tatiana Marchenko  
-Last Modified: March 28, 2025
+Created by: Ankur kumar 
+Last Modified: May 28, 2025
 
 ## 🪪 License
 Licensed under the ISC license.
